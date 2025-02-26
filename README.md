@@ -29,11 +29,13 @@
 Para facilitar a execução do projeto com todas as suas dependências, foi utilizado o Virtual Environment (virtualenv) do Python 3. Todo o venv foi subido no repositório para facilitar a verificação do projeto. 
 
 Para executá-lo no Linux ou Mac
+
 ```bash
 ./venv/bin/python3 main.py
 ```
 
 Para executá-lo no Windows
+
 ```powershell
 .\venv\Scripts\python3 main.py
 ```
@@ -42,7 +44,7 @@ Para executá-lo no Windows
 
 ### Audio
 
-[audio filtrado](resultados/sinal_filtrado.wav)
+[Baixar audio filtrado (.wav)](resultados/voz_filtrado.wav?raw=true)
 
 ### Polos e zeros de cada filtro
 

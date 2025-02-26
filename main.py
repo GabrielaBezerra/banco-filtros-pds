@@ -3,6 +3,7 @@ import numpy as np
 import scipy.io
 from scipy import signal
 import sounddevice as sd
+import soundfile as sf
 from scipy.io.wavfile import write
 
 # --- Passo 1: Carregar o arquivo .mat ---
@@ -81,9 +82,7 @@ sd.play(sinal_final_filtrado, frequencia_amostragem)
 sd.wait()
 
 # Salvar o áudio filtrado em um arquivo WAV
-# output_filename = 'sinal_filtrado.wav'
-# write(output_filename, frequencia_amostragem, sinal_final_filtrado.astype(np.int16))
-# print(f"Áudio filtrado salvo como {output_filename}")
+sf.write('resultados/voz_filtrado.wav', sinal_final_filtrado, frequencia_amostragem)
 
 # Diagrama de polos e zeros de cada filtro
 def plot_pz(b, a, title):

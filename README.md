@@ -46,6 +46,18 @@ Para executá-lo no Windows
 
 [Baixar audio filtrado (.wav)](resultados/voz_filtrado.wav?raw=true)
 
+## Projeto do cada Filtro
+
+| Filtro | Frequência de Corte | Ordem |
+| - | - | - | 
+| Passa-baixa | 1000 | 21 |
+| Passa-banda | 4000 | 32 |
+| Passa-alta | 1450, 3550 | 23 |
+
+Foi feita uma [busca iterativa](https://github.com/GabrielaBezerra/banco-filtros-pds/blob/main/busca.py) entre milhões de combinações de valores para tentar encontrar as melhores combinações de frequências de corte + ordem para cada filtro. Os valores finais foram escolhidos a partir desta busca, mais alguns experimentos adicionais manuais. 
+
+A **atenuação satisfatória** é cumprida quando, após os filtros, as frequências 1.25 kHz e 3.75kHz tenham no máximo magnitude 10.
+
 ### Polos e zeros de cada filtro
 
 <img src="./resultados/polos_zeros/lowpass_polos_zeros.png" width="480">
